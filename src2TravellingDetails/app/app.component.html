@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+
+<h1>Travelling Portal</h1>
+
+<form>
+
+  <mat-form-field>
+    <mat-select placeholder="City" [(ngModel)]="selectedValue" name="City">
+      <mat-option *ngFor="let City of Citys" [value]="City.value">
+        {{City.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p> Selected value: {{selectedValue}} </p>
+  
+  
+  <div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="StartDate"  type="date"  required>
+        <mat-hint>Please enter Start-Date</mat-hint>
+      </mat-form-field>
+        <mat-form-field class="example-full-width">
+        <input matInput  placeholder="EndDate"  type="date"  required>
+      <mat-hint>Please enter EndDate</mat-hint>
+      </mat-form-field>
+   </div>
+   <div class="button-row">
+      <button  mat-raised-button color="primary">Submit</button>
+    </div>
+
+</form>
+
+</div>
+
+
+
+<router-outlet></router-outlet>

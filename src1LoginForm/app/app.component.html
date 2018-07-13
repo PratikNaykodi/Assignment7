@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+<h2>Login Form</h2>
+  <form class="example-form">
+      <div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="UserName" [(ngModel)]="UserName" type="text" class="form-control" name="UserName" required>
+        <mat-hint>Please enter your name</mat-hint>
+      </mat-form-field>
+      </div>
+    
+      <div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+        <mat-hint>Please enter your password</mat-hint>
+      </mat-form-field>
+      </div>
+    
+      <div class="button-row">
+      <button (click)="fun(UserName,password)" mat-raised-button color="primary">Submit</button>
+      </div>
+  
+    </form>
+
+</div>
